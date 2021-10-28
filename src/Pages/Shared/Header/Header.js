@@ -29,7 +29,7 @@ const Header = () => {
                             <Button className="me-2" onClick={logout} variant="light">LogOut</Button> :
                             <Nav.Link as = {Link} eventKey={2} to="/login">Login/Register</Nav.Link>
                         }
-                        <Navbar.Text>Signed in as: <a href="#login"></a>{user?.displayName}</Navbar.Text>
+                        <Navbar.Text>Welcome: {user?.displayName}</Navbar.Text>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

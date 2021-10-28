@@ -12,6 +12,7 @@ import ManageOrders from './Pages/Admin/ManageOrders/ManageOrders';
 import OrderStatus from './Pages/Admin/OrderStatus/OrderStatus';
 import Login from './Pages/Login/Login/Login/Login';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivatrRoute/PrivateRoute';
 
 function App() {
   return (
@@ -35,15 +36,15 @@ function App() {
               <Route path="/login">
                   <Login></Login>
               </Route>
-              <Route path="/addservices">
+              <PrivateRoute path="/addservices">
                   <AddServices></AddServices>
-              </Route>
-              <Route path="/manageorders">
+              </PrivateRoute>
+              <PrivateRoute path="/manageorders">
                   <ManageOrders></ManageOrders>
-              </Route>
-              <Route path="/orderstatus">
+              </PrivateRoute>
+              <PrivateRoute path="/orderstatus">
                   <OrderStatus></OrderStatus>
-              </Route>
+              </PrivateRoute>
               <Route path="*">
                 <NotFound></NotFound>
               </Route>
