@@ -10,40 +10,47 @@ import NotFound from './Pages/NotFound/NotFound';
 import AddServices from './Pages/Admin/AddServices/AddServices';
 import ManageOrders from './Pages/Admin/ManageOrders/ManageOrders';
 import OrderStatus from './Pages/Admin/OrderStatus/OrderStatus';
+import Login from './Pages/Login/Login/Login/Login';
+import AuthProvider from './Context/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/about">
-                <About></About>
-            </Route>
-            <Route path='/contact'>
-                <Contact></Contact>
-            </Route>
-            <Route path="/addservices">
-                <AddServices></AddServices>
-            </Route>
-            <Route path="/manageorders">
-                <ManageOrders></ManageOrders>
-            </Route>
-            <Route path="/orderstatus">
-                <OrderStatus></OrderStatus>
-            </Route>
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/about">
+                  <About></About>
+              </Route>
+              <Route path='/contact'>
+                  <Contact></Contact>
+              </Route>
+              <Route path="/login">
+                  <Login></Login>
+              </Route>
+              <Route path="/addservices">
+                  <AddServices></AddServices>
+              </Route>
+              <Route path="/manageorders">
+                  <ManageOrders></ManageOrders>
+              </Route>
+              <Route path="/orderstatus">
+                  <OrderStatus></OrderStatus>
+              </Route>
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
