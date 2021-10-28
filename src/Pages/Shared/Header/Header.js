@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo1.png';
 
@@ -16,6 +16,12 @@ const Header = () => {
                         <Nav.Link as = {Link} to ="/contact">Contact</Nav.Link>
                     </Nav>
                     <Nav className="fs-6">
+                        <NavDropdown title="Admin" id="basic-nav-dropdown">
+                            <NavDropdown.Item as ={Link} to ="/addservices">Add Services</NavDropdown.Item>
+                            <NavDropdown.Item as ={Link} to ="/manageorders">Manage Orders</NavDropdown.Item>
+                            <NavDropdown.Item as ={Link} to ="/orderstatus">Order Status</NavDropdown.Item>
+                        </NavDropdown>
+                        
                         {/* {
                             user?.email ?
                             <Button className="me-2" onClick={logout} variant="light">LogOut</Button> :

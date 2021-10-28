@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressBook, faMobileAlt, faEnvelopeOpenText  } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import footerLogo from '../../../images/logo1.png';
 import fb from '../../../images/social/fb-icon.png';
 import ln from '../../../images/social/ln-icon.png';
 import yt from '../../../images/social/yt-icon.png';
@@ -23,7 +22,7 @@ const Footer = () => {
                             <img className="mb-3" src= {yt} width="25px" height="25px" alt=""/> {''}
                             <img className="mb-3" src= {tw} width="25px" height="25px" alt=""/>
                         </p>
-                        <p><small>copyright@2021. All  rights reserved</small></p>
+                        <h6>Your Trusted Travel Partner</h6>
                         
 
                     </Col>
@@ -45,7 +44,7 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
-            
+            <p><small className="bg-light my-3">copyright@2021. All  rights reserved</small></p>
         </div>
     );
 };

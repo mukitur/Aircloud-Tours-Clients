@@ -7,6 +7,9 @@ import Home from './Pages/Home/Home/Home';
 import About from './Pages/Home/About/About';
 import Contact from './Pages/Home/Contact/Contact';
 import NotFound from './Pages/NotFound/NotFound';
+import AddServices from './Pages/Admin/AddServices/AddServices';
+import ManageOrders from './Pages/Admin/ManageOrders/ManageOrders';
+import OrderStatus from './Pages/Admin/OrderStatus/OrderStatus';
 
 function App() {
   return (
@@ -25,6 +28,15 @@ function App() {
             </Route>
             <Route path='/contact'>
                 <Contact></Contact>
+            </Route>
+            <Route path="/addservices">
+                <AddServices></AddServices>
+            </Route>
+            <Route path="/manageorders">
+                <ManageOrders></ManageOrders>
+            </Route>
+            <Route path="/orderstatus">
+                <OrderStatus></OrderStatus>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
