@@ -13,6 +13,7 @@ import OrderStatus from './Pages/Admin/OrderStatus/OrderStatus';
 import Login from './Pages/Login/Login/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivatrRoute/PrivateRoute';
+import Booking from './Pages/Admin/Booking/Booking';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
               <Route path='/contact'>
                   <Contact></Contact>
               </Route>
+              <PrivateRoute path="/booking/:id">
+                <Booking></Booking>
+              </PrivateRoute>
               <Route path="/login">
                   <Login></Login>
               </Route>

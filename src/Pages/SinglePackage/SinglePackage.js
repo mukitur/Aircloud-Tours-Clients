@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button, Card, Col, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SinglePackage = ({sp}) => {
-    const {name, description, image, price} = sp;
+    const {name, description, image, price, _id} = sp;
     return (
         <div>
             <Container>
@@ -14,7 +15,9 @@ const SinglePackage = ({sp}) => {
                         <Card.Text>{description.slice(0,100)}</Card.Text>
                         <Card.Text><h5 className="text-warning">BDT {price}</h5> </Card.Text>
                         </Card.Body>
-                        <Button>Book {name}</Button>
+                        <Link to ={`/booking/${_id}`} >
+                            <Button>Book {name}</Button>
+                        </Link>
                     </Card>
                 </Col>
             </Container>
