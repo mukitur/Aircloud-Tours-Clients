@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
 import bannerImage from '../../../../images/banner.jpg';
 
 const Banner = () => {
