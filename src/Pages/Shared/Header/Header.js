@@ -7,7 +7,7 @@ import logo from '../../../images/logo1.png';
 const Header = () => {
     const {user, logout} = useAuth();
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
             <Container>
                 <Navbar.Brand as = {Link} to="/"><img src={logo} width="100%" height="60" alt=""/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
