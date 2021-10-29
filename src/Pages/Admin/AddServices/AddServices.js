@@ -21,7 +21,7 @@ const AddServices = () => {
         <div className="addServices">
             <h2 className="my-5">Please Add Packages</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 20 })} placeholder="Package Name" /><br/>
+                <input {...register("name", { required: true, maxLength: 100 })} placeholder="Package Name" /><br/>
                 <textarea {...register("description")} placeholder="Package Description"/><br/>
                 <input type="price" {...register("price")} placeholder="Price" /><br/>
                 <input {...register("image")} placeholder="Add Image" /><br/>
