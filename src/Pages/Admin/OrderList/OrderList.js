@@ -4,6 +4,23 @@ import { Link } from 'react-router-dom';
 
 const OrderList = ({ol}) => {
     const {name, email,cell, address} = ol;
+
+    const handleDelete = id=>{
+       const proceed = window.confirm('Are you sure? Do you want to delete the order?')
+       if(proceed){
+        const url =`http://localhost:5000/orders/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.deletedCount){
+                alert('Order Successfully Deleted') 
+            }
+        })
+       }
+    }
     return (
         <div>
             <Container>
@@ -16,7 +33,7 @@ const OrderList = ({ol}) => {
                         <Card.Text><p className="text-start">Address: {address}</p> </Card.Text>
                         </Card.Body>
                         <Link  className="text-start mb-3 ms-2" to ={"/"} >
-                            Delete order
+                            <Button onClick= {()=> handleDelete(ol._id)}>Delete Order</Button>
                         </Link>
                     </Card>
                 </Col>
