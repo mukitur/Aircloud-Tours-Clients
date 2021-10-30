@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Row } from 'react-bootstrap';
 import OrderList from '../OrderList/OrderList';
 
 const ManageOrders = () => {
@@ -14,12 +15,14 @@ const ManageOrders = () => {
     return (
         <div>
             <h2 className="my-5">Manage All Orders</h2>
-            {
-                orderLists.map(ol =><OrderList
-                    key={ol._id}
-                    ol={ol}
-                ></OrderList>)
-            }
+            <Row xs={2} md={3} className="g-4">
+                {
+                    orderLists.map(ol =><OrderList
+                        key={ol._id}
+                        ol={ol}
+                    ></OrderList>)
+                }
+            </Row>
         </div>
     );
 };

@@ -13,7 +13,7 @@ const Packages = () => {
     return (
         <div>
             <h2 className="my-5">"We organize Both Domestic & International Tour for you and your family <br/>with affordable price."</h2>
-            <Row xs={2} md={3} className="g-4">
+            <Row xs={2} md={3} className="g-3">
                 {
                     packages.map(sp => <SinglePackage
                         key= {sp._id}
