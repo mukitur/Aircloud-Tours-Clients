@@ -19,12 +19,12 @@ const AddServices = () => {
 
     return (
         <div className="addServices">
-            <h2 className="my-5">Please Add Packages</h2>
+            <h2 className="my-5">Please Add Packages for <br/> New Destination</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 100 })} placeholder="Package Name" /><br/>
-                <textarea {...register("description")} placeholder="Package Description"/><br/>
-                <input type="price" {...register("price")} placeholder="Price" /><br/>
-                <input {...register("image")} placeholder="Add Image" /><br/>
+                <input className="mb-2 w-75" {...register("name", { required: true, maxLength: 100 })} placeholder="Package Name" /><br/>
+                <textarea className="mb-2 w-75" {...register("description")} placeholder="Package Description"/><br/>
+                <input className="mb-2 w-75" type="price" {...register("price")} placeholder="Price" /><br/>
+                <input className="mb-4 w-75" {...register("image")} placeholder="Add Image" /><br/>
                 <input type="submit" value="Add Packages"/>
             </form>
         </div>

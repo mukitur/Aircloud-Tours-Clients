@@ -41,16 +41,15 @@ const Booking = () => {
                         <p className="mt-3">Tour Details: {singlePackage.description} </p>
                         <h3 className="text-warning">COST: BDT {singlePackage.price}</h3>
                     </Col>
-                    <Col sm={6}>
+                    <Col sm={6} className="text-center">
                         <h2>{singlePackage.name}</h2>
-                        <p><small>your Booking Id: {id}</small></p>
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 100 })} placeholder="Package Name" /><br/>
-                            <input defaultValue={user.email} {...register("email", { required: true, maxLength: 50 })} placeholder="Package Name" /><br/>
-                            <input type="number" {...register("cell")} placeholder="Cell Number" /><br/>
-                            <textarea {...register("address")} placeholder="Address"/><br/>
-                           <input {...register("city")} placeholder="City"/><br/>
-                          
+                        <p><small className="text-success">Please fillup the form for complete the order.</small></p>
+                        <form className="text-center" onSubmit={handleSubmit(onSubmit)}>
+                            <input className="mb-2 w-75" defaultValue={user.displayName} {...register("name", { required: true, maxLength: 100 })} placeholder="Package Name" /><br/>
+                            <input className="mb-2 w-75" defaultValue={user.email} {...register("email", { required: true, maxLength: 50 })} placeholder="Package Name" /><br/>
+                            <input className="mb-2 w-75" type="number" {...register("cell")} placeholder="Cell Number" /><br/>
+                            <textarea className="mb-2 w-75 rounded" {...register("address")} placeholder="Address"/><br/>
+                           <input className="mb-4 w-75" {...register("city")} placeholder="City"/><br/>
                             <input type="submit" value="Place Order"/>
                         </form>
                     </Col>
