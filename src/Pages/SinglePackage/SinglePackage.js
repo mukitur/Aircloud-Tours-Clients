@@ -12,11 +12,11 @@ const SinglePackage = ({sp}) => {
                         <Card.Img variant="top" src={image} alt =""/>
                         <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <Card.Text>{description.slice(0,100)}</Card.Text>
+                        <Card.Text>{description.slice(0, 120)}</Card.Text>
                         <Card.Text><h5 className="text-warning">BDT {price}</h5> </Card.Text>
                         </Card.Body>
                         <Link to ={`/booking/${_id}`} >
-                            <Button>Book {name}</Button>
+                            <Button className="mb-3">Book {name}</Button>
                         </Link>
                     </Card>
                 </Col>

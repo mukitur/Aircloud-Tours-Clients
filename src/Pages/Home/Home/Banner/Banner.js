@@ -1,18 +1,36 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import bannerImage from '../../../../images/banner.jpg';
+import { Carousel } from 'react-bootstrap';
+import bannerImage from '../../../../images/banner1.jpg';
+import bannerImage1 from '../../../../images/banner2.jpg';
+import bannerImage2 from '../../../../images/banner3.jpg';
+
 
 const Banner = () => {
     return (
         <div>
-            <Card className="bg-dark text-dark border-white">
-            <Card.Img src= {bannerImage} alt="Card image" />
-            <Card.ImgOverlay>
-                {/* <Link to = "/">
-                    <Button variant="primary" size="lg"> Book Packages </Button>
-                </Link> */}
-            </Card.ImgOverlay>
-          </Card>
+            <Carousel fade>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={bannerImage}
+                alt="First slide"
+                />
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={bannerImage1}
+                alt="Second slide"
+                />  
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                className="d-block w-100"
+                src={bannerImage2}
+                alt="Third slide"
+                />
+            </Carousel.Item>
+            </Carousel>
         </div>
     );
 };
