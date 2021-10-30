@@ -8,9 +8,12 @@ const OrderList = ({ol}) => {
     const handleDelete = id=>{
        const proceed = window.confirm('Are you sure? Do you want to delete the order?')
        if(proceed){
-        const url =`http://localhost:5000/orders/${id}`;
+        const url =`http://localhost:5000/deleteorders/${id}`;
         fetch(url, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                "content-type": "application/json"
+            }
         })
         .then(res=>res.json())
         .then(data=>{
