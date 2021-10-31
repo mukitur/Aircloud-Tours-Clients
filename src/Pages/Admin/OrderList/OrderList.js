@@ -37,7 +37,7 @@ const OrderList = ({ol}) => {
                         <Card.Text><p className="text-start">Address: {address}</p> </Card.Text>
                         <Card.Text><p className="text-start">Status: {status}</p> </Card.Text>
                         </Card.Body>
-                        <Link  className="text-start mb-3 ms-2" to ={"/"} >
+                        <Link  className="text-start mb-3 ms-2" to ={"/manageorders"} >
                             <Button>Update Status</Button>
                         </Link>
                         <Link  className="text-start mb-3 ms-2" to ={"/manageorders"} >
