@@ -14,9 +14,9 @@ const MyOrders = () => {
         .then(res=>res.json())
         .then(data=>setOrderLists(data))
     },[])
-    console.log(orderLists);
+   // console.log(orderLists);
     const getMyOrders = orderLists.filter(od=>od.email === user?.email)
-    console.log(getMyOrders);
+    //console.log(getMyOrders);
     
     return (
         <div>

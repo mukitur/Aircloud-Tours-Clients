@@ -16,6 +16,7 @@ import PrivateRoute from './Pages/Login/PrivatrRoute/PrivateRoute';
 import Booking from './Pages/Admin/Booking/Booking';
 import MyOrders from './Pages/Admin/MyOrders/MyOrders';
 import Packages from './Pages/Home/Packages/Packages';
+import MyOrder from './Pages/Admin/MyOrder/MyOrder';
 
 function App() {
   return (
