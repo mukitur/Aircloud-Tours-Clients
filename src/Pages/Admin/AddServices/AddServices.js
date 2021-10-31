@@ -7,7 +7,7 @@ const AddServices = () => {
 
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://shielded-basin-54972.herokuapp.com/services', data)
         .then(res=>{
             console.log(res);
             if(res.data.insertedId){

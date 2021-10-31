@@ -6,7 +6,7 @@ const Packages = () => {
     const [packages, setPackages] = useState([]);
 
     useEffect( () =>{
-        fetch('http://localhost:5000/services')
+        fetch('https://shielded-basin-54972.herokuapp.com/services')
             .then(res=>res.json())
             .then(data=> setPackages(data))
     } , [])

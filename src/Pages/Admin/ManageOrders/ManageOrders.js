@@ -7,7 +7,7 @@ import OrderList from '../OrderList/OrderList';
 const ManageOrders = () => {
     const [orderLists, setOrderLists] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://shielded-basin-54972.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setOrderLists(data))
     },[])

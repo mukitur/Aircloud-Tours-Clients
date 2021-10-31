@@ -8,7 +8,7 @@ const OrderList = ({ol}) => {
     const handleDelete = id=>{
        const proceed = window.confirm('Are you sure? Do you want to delete the order?')
        if(proceed){
-        const url =`http://localhost:5000/deleteorders/${id}`;
+        const url =`https://shielded-basin-54972.herokuapp.com/deleteorders/${id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {
