@@ -50,6 +50,7 @@ const Booking = () => {
                             <input className="mb-2 w-75" type="number" {...register("cell")} placeholder="Cell Number" /><br/>
                             <textarea className="mb-2 w-75 rounded" {...register("address")} placeholder="Address"/><br/>
                            <input className="mb-4 w-75" {...register("city")} placeholder="City"/><br/>
+                           <input className="mb-4 w-75" {...register("status")}  defaultValue="Pending"/><br/>
                             <input type="submit" value="Place Order"/>
                         </form>
                     </Col>

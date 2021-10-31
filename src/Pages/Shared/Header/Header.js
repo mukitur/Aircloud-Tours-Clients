@@ -22,7 +22,6 @@ const Header = () => {
                         <NavDropdown title="Admin" id="basic-nav-dropdown">
                             <NavDropdown.Item as ={Link} to ="/addservices">Add Services</NavDropdown.Item>
                             <NavDropdown.Item as ={Link} to ="/manageorders">Manage Orders</NavDropdown.Item>
-                            <NavDropdown.Item as ={Link} to ="/orderstatus">Order Status</NavDropdown.Item>
                             <NavDropdown.Item as ={Link} to ="/myorder">My Order</NavDropdown.Item>
                         </NavDropdown>
 
