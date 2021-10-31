@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Row } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import MyOrder from '../MyOrder/MyOrder';
 //import OrderList from '../OrderList/OrderList';
@@ -20,13 +21,14 @@ const MyOrders = () => {
     return (
         <div>
             <h2 className="my-5">My Order Details</h2>
-            
-            {
-                getMyOrders.map(odr=><MyOrder
-                key={odr._id}
-                odr={odr}
-                ></MyOrder>)
-            }
+            <Row xs={2} md={3} className="g-4">
+                {
+                    getMyOrders.map(odr=><MyOrder
+                    key={odr._id}
+                    odr={odr}
+                    ></MyOrder>)
+                }
+            </Row>
         </div>
     );
 };
