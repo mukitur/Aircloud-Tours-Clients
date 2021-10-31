@@ -4,7 +4,6 @@ import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../../hooks/useAuth';
 import logo from '../../../../images/logo1.png';
 import googleIcon from '../../../../images/google.png';
-import image from '../../../../images/banner3.jpg';
 
 const Login = () => {
     const {signInWithGoogle } = useAuth();
