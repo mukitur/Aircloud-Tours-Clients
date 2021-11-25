@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 const OrderList = ({ol}) => {
     const {name, email,cell, address,status} = ol;
-    const [services, setServices] = useState([]);
+    //const [services, setServices] = useState([]);
+    let [statusupdate, setStatusUpdate] = useState('Pending');
 
     const handleDelete = id=>{
        const proceed = window.confirm('Are you sure? Do you want to delete the order?')
@@ -25,6 +26,12 @@ const OrderList = ({ol}) => {
         })
        }
     }
+
+    const handleStatus =id =>{
+        fetch('https://shielded-basin-54972.herokuapp.com/orders')
+        .then(res=>res.json())
+        .then(data => setStatusUpdate(data))
+    }
     return (
         <div>
             <Container>
@@ -38,7 +45,7 @@ const OrderList = ({ol}) => {
                         <Card.Text><p className="text-start">Status: {status}</p> </Card.Text>
                         </Card.Body>
                         <Link  className="text-start mb-3 ms-2" to ={"/manageorders"} >
-                            <Button>Update Status</Button>
+                            <Button onClick= {()=> handleStatus(ol._id)}>Update Status</Button>
                         </Link>
                         <Link  className="text-start mb-3 ms-2" to ={"/manageorders"} >
                             <Button onClick= {()=> handleDelete(ol._id)}>Delete Order</Button>

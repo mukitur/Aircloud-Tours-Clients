@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Container, Form, FormControl, Row } from 'react-bootstrap';
+import { Button, Container, Form, FormControl } from 'react-bootstrap';
 
 const NewsLetter = () => {
     return (
@@ -15,7 +15,7 @@ const NewsLetter = () => {
                     <Button variant="outline-success">Send</Button>
                 </Form>
             </Container>
-            <p><small>Will be used in accordance with our Privacy Policy</small></p>
+            <p><small className="text-warning">Will be used in accordance with our Privacy Policy</small></p>
         </div>
     );
 };
